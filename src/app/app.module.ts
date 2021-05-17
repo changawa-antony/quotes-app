@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { QuoteDescriptionComponent } from './components/quote-description/quote-description.component';
+import { ButtonComponent } from './components/button/button.component';
+import { VotesComponent } from './components/votes/votes.component';
+import { FormComponent } from './components/form/form.component';
+import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     QuoteComponent,
-    QuoteDescriptionComponent
+    QuoteDescriptionComponent,
+    ButtonComponent,
+    VotesComponent,
+    FormComponent,
+    SubmitButtonComponent
   ],
   imports: [
     BrowserModule,
