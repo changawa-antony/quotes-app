@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { VotesComponent } from './components/votes/votes.component';
 import { FormComponent } from './components/form/form.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +23,13 @@ import { SubmitButtonComponent } from './components/submit-button/submit-button.
     ButtonComponent,
     VotesComponent,
     FormComponent,
-    SubmitButtonComponent
+    SubmitButtonComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
