@@ -1,6 +1,6 @@
 <div class="container col-10">
     <h2 class="text-center">Add quote</h2>
-    <form>
+    <form (ngSubmit)='submitQuote()'>
         <div class="form-group col">
             <label for="quote">Enter Quote</label>
             <textarea class="form-control" id="quote" rows="4" [(ngModel)]="quote" name="quote"></textarea>
@@ -17,8 +17,9 @@
                 <input type="text" required class="form-control" id="uploader" [(ngModel)]="uploader" name="quote">
             </div>
         </div>
+        <button type="submit" class="btn btn-info">Upload</button>
     </form>
-    <app-submit-button></app-submit-button>
+    
     <hr>
   </div>
 
