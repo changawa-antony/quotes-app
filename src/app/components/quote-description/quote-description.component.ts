@@ -8,10 +8,10 @@ import { Quote } from '../quote';
 })
 export class QuoteDescriptionComponent implements OnInit {
 
-  @Input() quote! : Quote;
+  @Input() quote!:Quote;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }
