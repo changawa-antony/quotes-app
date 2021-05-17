@@ -1,23 +1,29 @@
-<div class="container">
+<div class="container col-10">
     <h2 class="text-center">Add quote</h2>
     <form>
         <div class="form-group col">
             <label for="quote">Enter Quote</label>
-            <textarea class="form-control" id="quote" rows="4" required></textarea>
+            <textarea class="form-control" id="quote" rows="4" [(ngModel)]="quote" name="quote"></textarea>
         </div>
 
         <div class="row">
             <div class="form-group col">
                 <label for="author">Author</label>
-                <input type="text" required class="form-control" id="author">
+                <input type="text" required class="form-control" id="author" [(ngModel)]="author" name="quote">
             </div>
     
             <div class="form-group col">
                 <label for="author">Uploader</label>
-                <input type="text" required class="form-control" id="uploader">
+                <input type="text" required class="form-control" id="uploader" [(ngModel)]="uploader" name="quote">
             </div>
         </div>
     </form>
     <app-submit-button></app-submit-button>
     <hr>
+  </div>
+
+  <div>
+      <p>Quote : <span>{{quote}}</span></p>
+      <p>Author : <span>{{author}}</span></p>
+      <p>Uploader : <span>{{uploader}}</span></p> 
   </div>
