@@ -1,4 +1,7 @@
 <div>
+    <app-form (addQuote)="addQuote($event)"></app-form>
+</div>
+<div>
     <ul>
         <li *ngFor="let quote of quotes">
             {{quote.quote}}
@@ -6,3 +9,5 @@
         </li>
     </ul>
 </div>
+
+
