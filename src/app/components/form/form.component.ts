@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
   public quote!: string;
   public author!: string;
   public uploader! : string;
+  public votes! : number;
 
 
  submitQuote (){

@@ -7,8 +7,15 @@
             {{quote.quote}}
         <app-quote-description [quote]='quote'></app-quote-description>
         
-        <div>
-            <button type="button" class="btn btn-info" (click)="removeItem(quote)">Delete quote</button>
+        <div class="row">
+            <div class="col-5">
+                <button type="button" class="btn btn-info" (click)="removeItem(quote)">Delete quote</button>
+            </div>
+
+            <div class="col-5">
+                <app-votes></app-votes>
+            </div>
+            
         </div>
         </li>
     </ul>

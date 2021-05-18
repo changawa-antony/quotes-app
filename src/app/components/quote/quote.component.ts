@@ -21,7 +21,6 @@ export class QuoteComponent implements OnInit {
   removeItem(quote: Quote){
     const index: number = this.quotes.indexOf(quote);
     this.quotes.splice(index, 1);
-    console.log(index)
   }
 
   constructor() { }
