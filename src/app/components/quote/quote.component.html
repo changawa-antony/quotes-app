@@ -2,10 +2,14 @@
     <app-form (addQuote)="addQuote($event)"></app-form>
 </div>
 <div>
-    <ul>
+    <ul ng-repeat="quote in quotes">
         <li *ngFor="let quote of quotes">
             {{quote.quote}}
         <app-quote-description [quote]='quote'></app-quote-description>
+        
+        <div>
+            <button type="button" class="btn btn-info" (click)="removeItem(quote)">Delete quote</button>
+        </div>
         </li>
     </ul>
 </div>

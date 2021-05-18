@@ -18,6 +18,12 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
+  removeItem(quote: Quote){
+    const index: number = this.quotes.indexOf(quote);
+    this.quotes.splice(index, 1);
+    console.log(index)
+  }
+
   constructor() { }
 
   ngOnInit(): void {
