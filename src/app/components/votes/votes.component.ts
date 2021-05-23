@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output} from '@angular/core';
 import { Quote } from "../quote";
 
 @Component({
@@ -8,7 +8,32 @@ import { Quote } from "../quote";
 })
 export class VotesComponent implements OnInit {
 
-  constructor() { }
+
+  public votes: number;
+
+  
+  constructor() { 
+    this.votes = 0;
+    
+  }
+
+  
+
+  voteUp() {
+    this.votes += 1;
+
+    const storedVotes = JSON.stringify(this.votes);
+    localStorage.setItem("votes", storedVotes);
+    
+    }
+
+    voteDown() {
+    this.votes -= 1;
+
+    const storedVotes = JSON.stringify(this.votes);
+    localStorage.setItem("votes", storedVotes);
+
+    }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -9,9 +9,27 @@ import { Quote } from '../quote';
 export class QuoteDescriptionComponent implements OnInit {
 
   @Input() quote!:Quote;
-  constructor() { }
+
+  newDate:any = localStorage.getItem("postDate")
+
+  quotes:Quote[] = [];
+
+  addQuote (quote: Quote){
+    this.quotes.push(quote);
+  }
+
+  removeItem(quote: Quote){
+    const index: number = this.quotes.indexOf(quote);
+    this.quotes.splice(index, 1);
+  }
+
+  constructor() {
+
+   }
 
   ngOnInit(){
+
+    
   }
 
 }
