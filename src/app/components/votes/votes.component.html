@@ -1,11 +1,19 @@
 
 <div class="row">
-    <div class="col-2">
-        <button type="button" class="btn btn-info"z>Upvote</button>
+
+    <div class="col-2 other">
+        <button type="button" class="btn btn-info" (click)="voteUp()">Upvote</button>
     </div>
     
-    <div class="col-2">
-        <button type="button" class="btn btn-danger">Downvote</button>
+    <div class="col-2 other">
+        <button type="button" class="btn btn-danger" (click)="voteDown()">Downvote</button>
     </div>
+
+    <div class="col-2 votes">
+        <div class="value">
+            <p><span>{{ votes }}</span> votes</p>
+        </div>
+    </div>
+
 </div>
 

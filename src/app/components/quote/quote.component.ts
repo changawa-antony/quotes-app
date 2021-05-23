@@ -10,19 +10,23 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    {quote:'It is better to fail in originality than to succeed in imitation.',author:'Herman Melville',uploader: 'Kazungu'},
-    {quote:'Success usually comes to those who are too busy to be looking for it.',author:'Henry David Thoreau' ,uploader: 'Kazungu'}, 
+    {
+    quote:'It is better to fail in originality than to succeed in imitation.',
+    author:'Herman Melville',
+    uploader: 'Kazungu', 
+    postDate: 5, 
+    votes: 10}, 
   ];
 
   addQuote (quote: Quote){
     this.quotes.push(quote);
   }
 
-  removeItem(quote: Quote){
+   removeItem(quote: Quote){
     const index: number = this.quotes.indexOf(quote);
     this.quotes.splice(index, 1);
   }
-
+  
   constructor() { }
 
   ngOnInit(): void {

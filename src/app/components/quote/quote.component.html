@@ -4,19 +4,22 @@
 <div>
     <ul ng-repeat="quote in quotes">
         <li *ngFor="let quote of quotes">
-            {{quote.quote}}
-        <app-quote-description [quote]='quote'></app-quote-description>
-        
-        <div class="row">
-            <div class="col-5">
-                <button type="button" class="btn btn-info" (click)="removeItem(quote)">Delete quote</button>
+
+            <div class="quote text-center bg-light">
+                <p>
+                    <span>"</span> {{quote.quote}} <span>"</span>
+                </p>
             </div>
 
-            <div class="col-5">
-                <app-votes></app-votes>
+            <hr>
+
+            <div class="description">
+                <app-quote-description [quote]='quote'></app-quote-description>
             </div>
-            
-        </div>
+
+            <div class="del-button">
+                <button type="button" class="btn btn-info" (click)="removeItem(quote)">Delete quote</button>
+            </div>
         </li>
     </ul>
 </div>

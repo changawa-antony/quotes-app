@@ -1,0 +1,14 @@
+.votes{
+    margin-left: 50px;
+    width: 200px;
+}
+
+.value>p>span{
+    font-size: 60px;
+    color: rgb(161, 161, 161);
+}
+
+.other{
+    padding-top: 25px;
+}
+

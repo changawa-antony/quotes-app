@@ -11,6 +11,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { VotesComponent } from './components/votes/votes.component';
 import { FormComponent } from './components/form/form.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
+import { DatePipe } from './date.pipe';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { SubmitButtonComponent } from './components/submit-button/submit-button.
     VotesComponent,
     FormComponent,
     SubmitButtonComponent,
+    DatePipe,
 
   ],
   imports: [
